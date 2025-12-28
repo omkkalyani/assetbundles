@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_dab_pipeline:
+      name: dab_pipeline
+      libraries:
+        - glob:
+            include: ../../src/pipelines/dab_pipeline/transformations/**
+      schema: bronze
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: ${var.catalog_name}
+      serverless: true
+      root_path: ../../src/pipelines/dab_pipeline

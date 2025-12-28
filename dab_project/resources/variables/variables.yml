@@ -1,0 +1,5 @@
+variables:
+  catalog_name:
+    description: The Name Of The Catalog.
+    default: assetbundles
+  
